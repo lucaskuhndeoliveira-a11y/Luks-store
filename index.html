@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Luk's Store — canecas personalizadas e produtos digitais criativos.">
+<title>Luk's Store | Sua ideia, do seu jeito!</title>
+<style>
+:root{--bg:#080d19;--panel:#111a2b;--panel2:#172238;--cyan:#08d9f2;--purple:#a855f7;--white:#f7f9ff;--muted:#aab6ca;--line:#27354d;--pink:#ff4da6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--white)}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#080d19eF;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.15rem;letter-spacing:-.04em}.crown{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--purple));color:#07111d;font-size:1.4rem}.brand span span{color:var(--cyan)}nav{display:flex;gap:22px;color:var(--muted);font-size:.94rem}nav a:hover{color:var(--cyan)}.cart-btn,.btn{border:0;border-radius:12px;padding:11px 15px;background:linear-gradient(110deg,var(--cyan),#78a7ff,var(--purple));color:#07111d;font-weight:800;cursor:pointer}.cart-btn{white-space:nowrap}.hero{padding:76px 0 54px;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}.eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:800}.hero h1{font-size:clamp(2.6rem,6vw,5rem);line-height:.98;letter-spacing:-.065em;margin:15px 0}.hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--cyan),#c4a1ff);color:transparent;background-clip:text}.hero p{max-width:570px;color:var(--muted);line-height:1.7;font-size:1.05rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn.secondary{background:transparent;border:1px solid var(--line);color:var(--white)}.hero-art{min-height:300px;border:1px solid #29415b;border-radius:28px;background:radial-gradient(circle at 20% 20%,#0a9cb5 0,transparent 33%),radial-gradient(circle at 80% 75%,#7438bd 0,transparent 38%),linear-gradient(145deg,#111d31,#090e1a);display:grid;place-items:center;position:relative;overflow:hidden}.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #ffffff20;border-radius:50%;width:260px;height:260px}.hero-art:after{width:350px;height:350px}.cup{z-index:1;font-size:8rem;filter:drop-shadow(0 18px 18px #0008);transform:rotate(-9deg)}.floating{position:absolute;z-index:2;padding:10px 13px;border:1px solid #ffffff26;border-radius:12px;background:#0b1324d9;font-weight:750}.f1{top:24px;left:18px;color:var(--cyan)}.f2{bottom:25px;right:16px;color:#d6b7ff}.section{padding:36px 0 62px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}.section h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.05em;margin:8px 0}.section-head p{color:var(--muted);margin:0;max-width:520px;line-height:1.5}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.filter{border:1px solid var(--line);background:transparent;color:var(--muted);padding:9px 13px;border-radius:999px;cursor:pointer}.filter.active{background:#0d3440;border-color:var(--cyan);color:var(--cyan)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}.product:hover{transform:translateY(-4px);border-color:#42617f}.product-art{min-height:175px;display:grid;place-items:center;font-size:5rem;position:relative;background:radial-gradient(circle at 50% 35%,#1c4260,#10192a 68%)}.product-art.digital{background:radial-gradient(circle at 50% 35%,#52337a,#17152b 70%)}.product-art.pink{background:radial-gradient(circle at 50% 35%,#6d315e,#201426 70%)}.tag{position:absolute;top:13px;left:13px;background:#07101ddf;border:1px solid #ffffff20;color:var(--cyan);border-radius:8px;padding:6px 8px;font-size:.72rem;font-weight:800}.product-info{padding:17px;display:flex;flex-direction:column;flex:1}.product-info h3{margin:0 0 8px;font-size:1.08rem}.product-info p{color:var(--muted);font-size:.9rem;line-height:1.5;margin:0 0 18px;flex:1}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px}.price{font-size:1.25rem;font-weight:900}.add{background:#102e3b;border:1px solid #176477;color:var(--cyan);padding:10px 12px;border-radius:10px;font-weight:800;cursor:pointer}.add:hover{background:#164556}.note{margin-top:20px;color:var(--muted);font-size:.84rem;line-height:1.6;border-left:3px solid var(--purple);padding:10px 14px;background:#111629;border-radius:0 10px 10px 0}.banner{border:1px solid var(--line);border-radius:22px;padding:28px;background:linear-gradient(110deg,#102438,#211637);display:flex;align-items:center;justify-content:space-between;gap:22px}.banner h2{margin:0 0 8px}.banner p{margin:0;color:var(--muted);line-height:1.5}.banner .spark{font-size:3rem}footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.88rem}.footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.modal-backdrop{position:fixed;inset:0;background:#000a;z-index:30;display:none;justify-content:flex-end}.modal-backdrop.open{display:flex}.cart-panel{background:#0d1524;border-left:1px solid var(--line);width:min(430px,100%);height:100%;padding:22px;overflow:auto}.cart-head{display:flex;align-items:center;justify-content:space-between}.close{background:transparent;border:1px solid var(--line);color:var(--white);border-radius:9px;padding:7px 11px;cursor:pointer}.cart-item{display:grid;grid-template-columns:1fr auto;gap:10px;padding:15px 0;border-bottom:1px solid var(--line)}.cart-item small{display:block;color:var(--muted);margin-top:5px}.qty{display:flex;align-items:center;gap:8px;margin-top:8px}.qty button{background:var(--panel2);color:var(--white);border:1px solid var(--line);border-radius:6px;width:26px;height:26px;cursor:pointer}.cart-total{display:flex;justify-content:space-between;font-weight:900;font-size:1.2rem;margin:22px 0}.checkout{width:100%;padding:14px}.empty{color:var(--muted);padding:25px 0;line-height:1.6}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#d9fff7;color:#07111d;padding:12px 17px;border-radius:12px;font-weight:800;display:none;z-index:40;box-shadow:0 10px 30px #0007}.toast.show{display:block}
+@media(max-width:760px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:48px}.hero-art{min-height:240px}.grid{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head p{margin-top:8px}.banner{align-items:flex-start}.cup{font-size:6.5rem}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.product-art{min-height:205px}.hero h1{font-size:3rem}.cart-btn{padding:10px 11px}.brand{font-size:1rem}.banner .spark{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#inicio"><span class="crown">♛</span><span>Luk's <span>Store</span></span></a>
+  <nav><a href="#inicio">Início</a><a href="#canecas">Canecas</a><a href="#digitais">Digitais</a><a href="#sobre">Sobre</a></nav>
+  <button class="cart-btn" id="openCart" aria-label="Abrir carrinho">🛒 Carrinho (<span id="cartCount">0</span>)</button>
+</div></header>
+<main>
+<section class="wrap hero" id="inicio">
+  <div><div class="eyebrow">Criatividade em cada detalhe</div>
+    <h1>Sua ideia,<br><em>do seu jeito.</em></h1>
+    <p>Canecas personalizadas e kits digitais para deixar sua rotina mais criativa. Encontre algo com a sua cara na Luk's Store.</p>
+    <div class="actions"><a class="btn" href="#canecas">Ver produtos ↗</a><a class="btn secondary" href="#digitais">Explorar kits digitais</a></div>
+  </div>
+  <div class="hero-art" aria-label="Ilustração decorativa de caneca"><span class="floating f1">✦ Feito com criatividade</span><div class="cup">☕</div><span class="floating f2">Luk's Store ✨</span></div>
+</section>
+<section class="wrap section" id="canecas">
+  <div class="section-head"><div><div class="eyebrow">Escolha a sua favorita</div><h2>Canecas personalizadas</h2></div><p>Ideias para presentear, estudar, jogar ou tomar aquele café. As imagens são ilustrações demonstrativas.</p></div>
+  <div class="filters"><button class="filter active" data-filter="all">Todos</button><button class="filter" data-filter="mug">Canecas</button><button class="filter" data-filter="digital">Kits digitais</button></div>
+  <div class="grid" id="products">
+    <article class="product" data-type="mug"><div class="product-art"><span class="tag">MAIS CRIATIVA</span>🎮☕</div><div class="product-info"><h3>Caneca Gamer em Ação</h3><p>Estampa original com clima gamer. Personalização e produção precisam ser confirmadas antes da venda.</p><div class="product-bottom"><span class="price">R$ 29,90</span><button class="add" data-id="mug1">Adicionar +</button></div></div></article>
+    <article class="product" data-type="mug"><div class="product-art pink">☕💡</div><div class="product-info"><h3>Caneca Café &amp; Ideias</h3><p>Uma ideia divertida para quem gosta de café, criatividade e boas conversas.</p><div class="product-bottom"><span class="price">R$ 27,90</span><button class="add" data-id="mug2">Adicionar +</button></div></div></article>
+    <article class="product" data-type="mug"><div class="product-art"><span class="tag">PRESENTE</span>🌈☕</div><div class="product-info"><h3>Caneca Sonhe e Conquiste</h3><p>Arte motivacional colorida para alegrar a mesa de estudos ou trabalho.</p><div class="product-bottom"><span class="price">R$ 31,90</span><button class="add" data-id="mug3">Adicionar +</button></div></div></article>
+    <article class="product" data-type="digital"><div class="product-art digital"><span class="tag">ARQUIVO DIGITAL</span>🗓️✨</div><div class="product-info"><h3>Kit Planner Organizado</h3><p>Conceito de kit com páginas de planejamento semanal, tarefas e hábitos. Arquivo demonstrativo.</p><div class="product-bottom"><span class="price">R$ 9,90</span><button class="add" data-id="dig1">Adicionar +</button></div></div></article>
+    <article class="product" data-type="digital"><div class="product-art digital">🎉🎨</div><div class="product-info"><h3>Kit de Convites Criativos</h3><p>Modelos digitais para comemorações. Personalização e formato final a definir.</p><div class="product-bottom"><span class="price">R$ 12,90</span><button class="add" data-id="dig2">Adicionar +</button></div></div></article>
+    <article class="product" data-type="digital"><div class="product-art digital">📚🖍️</div><div class="product-info"><h3>Kit de Estudos Colorido</h3><p>Capas, listas e folhas de organização para deixar os estudos mais práticos.</p><div class="product-bottom"><span class="price">R$ 8,90</span><button class="add" data-id="dig3">Adicionar +</button></div></div></article>
+  </div>
+  <div class="note"><strong>Antes de vender:</strong> os produtos acima são exemplos de catálogo, não ofertas reais. Confirme custos, disponibilidade, arquivos finais e prazos. Produtos digitais só devem ser vendidos por um canal que permita expressamente esse tipo de entrega.</div>
+</section>
+<section class="wrap section" id="digitais"><div class="banner"><div><div class="eyebrow">Ideias que viram presentes</div><h2>Kits digitais e criatividade</h2><p>Planners, materiais de organização e convites criados com cuidado.<br>Os arquivos precisam ser finalizados antes de serem oferecidos para compra.</p></div><div class="spark">✦ ✧</div></div></section>
+<section class="wrap section" id="sobre"><div class="section-head"><div><div class="eyebrow">Sobre a marca</div><h2>Bem-vindo à Luk's Store</h2></div><p>Uma marca-conceito moderna, com preto, azul elétrico e roxo. “Sua ideia, do seu jeito!”</p></div></section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year"></span> Luk's Store — Sua ideia, do seu jeito!</span><span>Loja demonstrativa · Sem pagamento real configurado</span></div></footer>
+<div class="modal-backdrop" id="cartBackdrop" role="dialog" aria-modal="true" aria-label="Seu carrinho"><div class="cart-panel"><div class="cart-head"><h2>Seu carrinho</h2><button class="close" id="closeCart">Fechar ✕</button></div><div id="cartItems"></div><div class="cart-total"><span>Total demonstrativo</span><span id="cartTotal">R$ 0,00</span></div><button class="btn checkout" id="checkout">Continuar (demonstração)</button><p class="note">Este carrinho é apenas demonstrativo. Ele não recebe pagamentos, não envia pedidos e não salva compras em um sistema de loja.</p></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const catalog={
+ mug1:{name:"Caneca Gamer em Ação",price:29.90,type:"mug"},
+ mug2:{name:"Caneca Café & Ideias",price:27.90,type:"mug"},
+ mug3:{name:"Caneca Sonhe e Conquiste",price:31.90,type:"mug"},
+ dig1:{name:"Kit Planner Organizado",price:9.90,type:"digital"},
+ dig2:{name:"Kit de Convites Criativos",price:12.90,type:"digital"},
+ dig3:{name:"Kit de Estudos Colorido",price:8.90,type:"digital"}
+};
+const cart={};
+const money=n=>n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const $=id=>document.getElementById(id);
+function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),2200)}
+function renderCart(){
+ const entries=Object.entries(cart).filter(([,q])=>q>0);
+ $("cartCount").textContent=entries.reduce((s,[,q])=>s+q,0);
+ $("cartItems").innerHTML=entries.length?entries.map(([id,q])=>`<div class="cart-item"><div><strong>${catalog[id].name}</strong><small>${money(catalog[id].price)} cada</small><div class="qty"><button data-action="minus" data-id="${id}" aria-label="Diminuir">−</button><span>${q}</span><button data-action="plus" data-id="${id}" aria-label="Aumentar">+</button></div></div><strong>${money(catalog[id].price*q)}</strong></div>`).join(""):'<p class="empty">Seu carrinho está vazio. Explore os produtos e adicione seus favoritos!</p>';
+ $("cartTotal").textContent=money(entries.reduce((s,[id,q])=>s+catalog[id].price*q,0));
+}
+document.querySelectorAll(".add").forEach(b=>b.addEventListener("click",()=>{cart[b.dataset.id]=(cart[b.dataset.id]||0)+1;renderCart();toast("Produto adicionado ao carrinho!")}));
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.querySelectorAll(".product").forEach(p=>p.style.display=b.dataset.filter==="all"||p.dataset.type===b.dataset.filter?"flex":"none")}));
+$("openCart").addEventListener("click",()=>{$("cartBackdrop").classList.add("open");renderCart()});
+$("closeCart").addEventListener("click",()=>$("cartBackdrop").classList.remove("open"));
+$("cartBackdrop").addEventListener("click",e=>{if(e.target===$("cartBackdrop"))$("cartBackdrop").classList.remove("open")});
+$("cartItems").addEventListener("click",e=>{const b=e.target.closest("button[data-action]");if(!b)return;const id=b.dataset.id;if(b.dataset.action==="plus")cart[id]++;else cart[id]--;if(cart[id]<=0)delete cart[id];renderCart()});
+$("checkout").addEventListener("click",()=>toast("Demonstração: configure pagamentos antes de vender."));
+$("year").textContent=new Date().getFullYear();renderCart();
+</script>
+</body>
+</html>
